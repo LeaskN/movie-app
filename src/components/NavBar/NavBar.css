@@ -5,6 +5,7 @@
     position: sticky;
     display: flex;
     align-items: center;
+    top: 0px;
 }
 
 .navBar img{

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './MovieCard.css'
 
 class MovieCard extends Component {
     constructor(props){
@@ -6,15 +7,11 @@ class MovieCard extends Component {
         this.state={}
     }
 
-    componentDidMount(){
-        fetch('https://api.themoviedb.org/3/movie/popular?api_key=fed5b7c4a0fea83e14866a8dd8cb6baa&language=en-US&page=1')
-            .then(res => res.json())
-            .then(res => console.log(res))
-    }
-
     render(){
         return( 
-            <h1>Test</h1>
+            <div className="movieCard">
+                <h1>{this.props.original_title}</h1>
+            </div>
         )
     }
 }
