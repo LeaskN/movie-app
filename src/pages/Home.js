@@ -8,7 +8,7 @@ class Home extends Component {
     }
 
     componentDidMount(){
-      fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=fed5b7c4a0fea83e14866a8dd8cb6baa&language=en-US&page=1')
+      fetch('https://api.themoviedb.org/3/movie/top_rated?api_key=fed5b7c4a0fea83e14866a8dd8cb6baa&language=en-US&page=1&language=en-US')
         .then(res => res.json())
         .then(res => this.setState({movies: res}))
     }
