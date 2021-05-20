@@ -25,13 +25,13 @@ class MovieCard extends Component {
             )
         ){
             const { original_title, release_date, vote_average, poster_path, runtime, genres } = this.state.movieData;
-            let certification = this.state.movieData.release_dates.results.filter(rel_date => rel_date.iso_3166_1 === 'US' )[0].release_dates[0].certification;
+            let certification = this.state.movieData?.release_dates.results.filter(rel_date => rel_date.iso_3166_1 === 'US' )[0]?.release_dates[0].certification;
             return( 
                 <div>
                     <div className="movieCard">
                         <h1>{original_title}({release_date.slice(0, 4)})</h1>
                         <h1>Average Rating: {vote_average}</h1>
-                        <h1>{certification.length > 0 ? certification : 'N/A'}</h1>
+                        <h1>{certification?.length > 0 ? certification : 'N/A'}</h1>
                         <h1>Runtime: {runtime}</h1>
                         <img alt="movie-poster" src={`https://image.tmdb.org/t/p/original/${poster_path}`} />
                         <h1>Genre: {genres.map((genre, i) => genres.length - 1 !== i ? genre.name +', ' : genre.name)}</h1>
