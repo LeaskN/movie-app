@@ -51,8 +51,12 @@ class Home extends Component {
         this.setState({didScroll: false})
       }, 250)
     }
+
+    scrollUp(){
+      window.scroll({top: 0, left:0, behavior: 'smooth'})
+    }
+
     render(){
-      
       return( 
         <div className="container">
           <div className="filter">
@@ -64,6 +68,7 @@ class Home extends Component {
             {this.state.movies ?
             this.state.movies.map(movie => <MovieCard key={movie.id + movie.title} id={movie.id} minRange={this.state.minRange} maxRange={this.state.maxRange}/>) : <h1>No movies</h1>}
           </div>
+          <div onClick={this.scrollUp} className="scrollUp">&#x21d1;</div>
         </div>
       )
     }

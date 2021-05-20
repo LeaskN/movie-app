@@ -22,3 +22,24 @@ body{
 .spacer{
   min-width: 250px
 }
+
+.scrollUp{
+  position: fixed;
+  display: block;
+  width: 40px;
+  height: 40px;
+  right: 15px;
+  bottom: 15px;
+  background-color: #e04545da;
+  color:#ffffff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 2em;
+}
+
+.scrollUp:hover{
+  cursor: pointer;
+}
