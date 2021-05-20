@@ -63,7 +63,6 @@ class Home extends Component {
             <p>Start Date:<input type="date" min="1" id="minRange" onChange={event => this.inputChange(event)}></input></p>
             <p>End Date: <input type="date" min={this.state.range} id="maxRange" onChange={event => this.inputChange(event)}></input></p>
           </div>
-          <div className="spacer"></div>
           <div className="movies">
             {this.state.movies ?
             this.state.movies.map(movie => <MovieCard key={movie.id + movie.title} id={movie.id} minRange={this.state.minRange} maxRange={this.state.maxRange}/>) : <h1>No movies</h1>}

@@ -1,26 +1,26 @@
 body{
   background-color: #1E1E1E;
   color: white;
+  min-width: 780px;
 }
 
 .container{
   display: flex;
+  justify-content: center;
+  margin: auto;
   max-width: 1200px;
   padding: 12px;
 }
 
 .filter{
-  position: fixed;
-  display: block;
-  left: 0;
   background-color: #e04545;
   padding: 12px;
   margin: 16px;
   border-radius: 10px;
-}
-
-.spacer{
-  min-width: 250px
+  min-width: 220px;
+  height: fit-content;
+  position: sticky;
+  top: 103px;
 }
 
 .scrollUp{
@@ -30,7 +30,7 @@ body{
   height: 40px;
   right: 15px;
   bottom: 15px;
-  background-color: #e04545da;
+  background-color: #e04545;
   color:#ffffff;
   border-radius: 100%;
   display: flex;
