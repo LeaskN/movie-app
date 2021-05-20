@@ -3,3 +3,22 @@ body{
   color: white;
 }
 
+.container{
+  display: flex;
+  max-width: 1200px;
+  padding: 12px;
+}
+
+.filter{
+  position: fixed;
+  display: block;
+  left: 0;
+  background-color: #e04545;
+  padding: 12px;
+  margin: 16px;
+  border-radius: 10px;
+}
+
+.spacer{
+  min-width: 250px
+}

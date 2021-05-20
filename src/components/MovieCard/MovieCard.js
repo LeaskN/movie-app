@@ -36,9 +36,8 @@ class MovieCard extends Component {
                         </div>
                         <div>
                             <h1>{original_title}({release_date.slice(0, 4)})</h1>
-                            <h2>Average Rating: {vote_average}</h2>
                             <h3>{certification?.length > 0 ? certification : 'N/A'} | Runtime: {hours} hours {minutes} minutes | Genre: {genres.map((genre, i) => genres.length - 1 !== i ? genre.name +', ' : genre.name)}</h3>
-                            <h3></h3>
+                            <h2>Average Rating: {vote_average}/10</h2>
                         </div>
                     </div>
                 </div>
