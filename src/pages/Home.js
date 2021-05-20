@@ -16,7 +16,7 @@ class Home extends Component {
     render(){
       return( 
         this.state.movies ?
-        this.state.movies.results.map(movie => <MovieCard {...movie}/>) : <h1>No movies</h1>
+        this.state.movies.results.map(movie => <MovieCard id={movie.id}/>) : <h1>No movies</h1>
       )
     }
 }

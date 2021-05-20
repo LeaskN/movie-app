@@ -1,5 +1,4 @@
 .movieCard{
-    height: 150px;
     box-shadow: 1px 1px 4px;
     border-radius: 10px;
     margin: 15px;
@@ -8,4 +7,8 @@
 
 .movieCard:hover{
     box-shadow: 1px 1px 8px;
+}
+
+.movieCard > img {
+    max-height: 100px;
 }
