@@ -5,13 +5,18 @@
     padding: 7px;
     display: flex;
     align-items: center;
+    overflow: hidden;
 }
-
+@media screen and (max-width: 775px) {
+    .movieCard{
+      display: block;
+    }
+  }
 .movieCard:hover{
     box-shadow: 1px 1px 8px;
 }
 
 .movieCard img {
-    max-height: 200px;
+    max-height: 300px;
     margin: 15px;
 }

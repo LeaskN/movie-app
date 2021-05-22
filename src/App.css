@@ -1,7 +1,8 @@
 body{
   background-color: #1E1E1E;
   color: white;
-  min-width: 780px;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .container{
@@ -9,7 +10,7 @@ body{
   justify-content: center;
   margin: auto;
   max-width: 1200px;
-  padding: 12px;
+  padding: 20px;
 }
 
 .filter{
@@ -21,6 +22,12 @@ body{
   height: fit-content;
   position: sticky;
   top: 103px;
+}
+
+@media screen and (max-width: 775px) {
+  .container{
+    display: block;
+  }
 }
 
 .scrollUp{
