@@ -26,7 +26,7 @@ body{
 
 @media screen and (max-width: 775px) {
   .container{
-    display: block;
+    flex-direction: column;
   }
 }
 

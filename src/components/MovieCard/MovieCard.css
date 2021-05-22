@@ -9,7 +9,8 @@
 }
 @media screen and (max-width: 775px) {
     .movieCard{
-      display: block;
+      flex-direction: column;
+      align-items: center;
     }
   }
 .movieCard:hover{
