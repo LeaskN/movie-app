@@ -59,3 +59,9 @@ body{
 .scrollUp:hover{
   cursor: pointer;
 }
+
+.movies{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
