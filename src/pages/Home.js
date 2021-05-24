@@ -79,7 +79,9 @@ class Home extends Component {
           {/* If movies exists in state map over them and render them each to the screen. */}
           {/* Otherwise render an error message. */}
           {this.state.movies ?
-            this.state.movies.map(movie => <MovieCard key={movie.id + movie.title} id={movie.id} minDate={this.state.minDate} maxDate={this.state.maxDate} />) : <h1>No movies, please re-load the page.</h1>}
+            this.state.movies.map(movie => 
+            <MovieCard key={movie.id + movie.title} id={movie.id} minDate={this.state.minDate} maxDate={this.state.maxDate} />) : 
+            <h1>No movies, please re-load the page.</h1>}
         </div>
         <div onClick={this.scrollUp} className="scrollUp">&#x21d1;</div>
       </div>
