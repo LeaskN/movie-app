@@ -34,8 +34,10 @@ class Home extends Component {
     }
 
     infiniteScroll() {
+      console.log(window.innerHeight + document.documentElement.scrollTop, document.documentElement.offsetHeight)
+
       if (
-        window.innerHeight + document.documentElement.scrollTop > document.documentElement.offsetHeight && this.state.didScroll === false
+        window.innerHeight + document.documentElement.scrollTop >= document.documentElement.offsetHeight - 500 && this.state.didScroll === false
       ) {
         this.setState({didScroll: true});
         let newPage = this.state.page;
