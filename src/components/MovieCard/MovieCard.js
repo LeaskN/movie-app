@@ -4,7 +4,7 @@ import './MovieCard.css';
 class MovieCard extends Component {
   constructor(props) {
     super(props)
-    this.state = { range: 0 }
+    this.state = { }
   }
 
   // Request an individual movie, returning more information than the original multi-movie request
