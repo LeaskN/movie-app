@@ -16,11 +16,11 @@ class MovieCard extends Component {
     render(){
         if(
             (this.state.movieData && 
-                (this.props.minRange === undefined || this.props.maxRange === undefined)
+                (this.props.minDate === undefined || this.props.maxDate === undefined)
             ) || (this.state.movieData && 
                 (
-                    (new Date(this.state.movieData.release_date).getTime() > this.props.minRange) && 
-                    (new Date(this.state.movieData.release_date).getTime() < this.props.maxRange)
+                    (new Date(this.state.movieData.release_date).getTime() > this.props.minDate) && 
+                    (new Date(this.state.movieData.release_date).getTime() < this.props.maxDate)
                 )
             )
         ){
