@@ -25,7 +25,7 @@ class Home extends Component {
     fetchNextPage(){
       fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=fed5b7c4a0fea83e14866a8dd8cb6baa&language=en-US&page=${this.state.page}&language=en-US`)
         .then(res => res.json())
-        .then(res => {console.log(res); return res.results})
+        .then(res => res.results)
         .then(res => this.setState({movies: [...this.state.movies, ...res]}))
     }
 
