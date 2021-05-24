@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import MovieCard from '../components/MovieCard/MovieCard'
+import MovieCard from '../components/MovieCard/MovieCard';
+import Filter from '../components/Filter/Filter';
 
 class Home extends Component {
   constructor(props) {
@@ -15,6 +16,7 @@ class Home extends Component {
     this.fetchNextPage = this.fetchNextPage.bind(this);
     this.infiniteScroll = this.infiniteScroll.bind(this);
     this.allowScroll = this.allowScroll.bind(this);
+    this.handleDates = this.handleDates.bind(this);
   }
 
   componentDidMount() {
@@ -34,9 +36,8 @@ class Home extends Component {
       .then(res => this.setState({ movies: [...this.state.movies, ...res] }))
   }
 
-  // if the date inputs receive any changes update the minDate or maxDate in state
-  inputChange(e) {
-    this.setState({ [e.target.id]: new Date(e.target.value).getTime() });
+  handleDates(minMax, date){
+    this.setState({ [minMax]: date });
   }
 
   // allow infinite scrolling
@@ -71,10 +72,7 @@ class Home extends Component {
   render() {
     return (
       <div className="container">
-        <div className="filter">
-          <p>Start Date:<input type="date" min="1" id="minDate" onChange={event => this.inputChange(event)}></input></p>
-          <p>End Date: <input type="date" min={this.state.range} id="maxDate" onChange={event => this.inputChange(event)}></input></p>
-        </div>
+        <Filter dates={this.handleDates} />
         <div className="movies">
           {/* If movies exists in state map over them and render them each to the screen. */}
           {/* Otherwise render an error message. */}

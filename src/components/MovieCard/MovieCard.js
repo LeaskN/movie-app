@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MovieCard.css'
+import './MovieCard.css';
 
 class MovieCard extends Component {
   constructor(props) {

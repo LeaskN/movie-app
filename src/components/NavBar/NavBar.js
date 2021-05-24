@@ -1,5 +1,5 @@
 import './NavBar.css';
-import Clapper from '../../assets/movieLogo.png'
+import Clapper from '../../assets/movieLogo.png';
 
 function NavBar() {
   return (

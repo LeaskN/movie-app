@@ -13,7 +13,7 @@ body{
   padding: 20px;
 }
 
-.filter{
+/* .filter{
   background-color: #e04545;
   padding: 12px;
   margin: 16px;
@@ -37,7 +37,7 @@ body{
     left:-20px;
     margin: 0px;
   }
-}
+} */
 
 .scrollUp{
   position: fixed;

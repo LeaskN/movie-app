@@ -1,0 +1,25 @@
+.filter{
+  background-color: #e04545;
+  padding: 12px;
+  margin: 16px;
+  border-radius: 10px;
+  min-width: 220px;
+  height: fit-content;
+  position: sticky;
+  top: 103px;
+}
+  
+@media screen and (max-width: 850px) {
+  .container{
+    flex-direction: column;
+    padding: 0px;
+  }
+  .filter{
+    top: 0px;
+    left: 0px;
+    padding: 0px 12px;
+    border-radius: 0px;
+    left:-20px;
+    margin: 0px;
+  }
+}
