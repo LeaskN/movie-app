@@ -10,16 +10,12 @@ class AllMovies extends Component {
     }
   }
 
-  // if the date inputs receive any changes update the minDate or maxDate in props (coming from home component)
-  inputChange(e) {
-    this.props.dates([e.target.id], new Date(e.target.value).getTime());
-  }
-
   render() {
+    // Destructure and bind variables from the data passed from the home component
     const {movies, maxDate, minDate} = this.props.data;
     return (
       <div className="movies">
-        {/* If movies exists in state map over them and render them each to the screen. */}
+        {/* If movies exists in props map over them and render them each to the screen. */}
         {/* Otherwise render an error message. */}
         {
           movies ?
